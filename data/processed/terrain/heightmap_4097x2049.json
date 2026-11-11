@@ -1,0 +1,58 @@
+{
+  "name": "heightmap_4097x2049",
+  "format": "16-bit unsigned, PNG row 0 = north; RAW little-endian, row 0 = south (Unity)",
+  "width_px": 4097,
+  "height_px": 2049,
+  "content_width_px": 4097,
+  "content_height_px": 2049,
+  "pad_pixels": {
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0
+  },
+  "crs": "EPSG:32612",
+  "origin_utm12n_sw": {
+    "easting": 415892.1251364612,
+    "northing": 4560667.415761628
+  },
+  "bounds_utm12n_content": {
+    "west": 415892.1251364612,
+    "south": 4560480.915761628,
+    "east": 428362.1251364612,
+    "north": 4566715.915761628
+  },
+  "bounds_utm12n_padded": {
+    "west": 415892.1251364612,
+    "south": 4560480.915761628,
+    "east": 428362.1251364612,
+    "north": 4566715.915761628
+  },
+  "meters_per_pixel_x": 3.043690505247742,
+  "meters_per_pixel_y": 3.0429477794045874,
+  "min_elevation_m": 1297.544677734375,
+  "max_elevation_m": 2917.81494140625,
+  "height_scale_m": 1620.270263671875,
+  "vertical_exaggeration": 1.0,
+  "unity": {
+    "terrain_width_m": 12470.0,
+    "terrain_length_m": 6235.0,
+    "terrain_height_m": 1620.270263671875,
+    "heightmap_resolution": "4097x2049 (non-square; see IMPORT.md)",
+    "raw_bit_depth": 16,
+    "raw_byte_order": "little-endian",
+    "raw_row_0": "south",
+    "set_terrain_size": "Terrain.width = width_m, Terrain.length = length_m, Terrain.height = height_scale_m"
+  },
+  "unreal": {
+    "landscape_scale_x": 0.030436905052477422,
+    "landscape_scale_y": 0.030429477794045874,
+    "landscape_scale_z": 0.00024723739431935227,
+    "note": "See docs/IMPORT.md for exact scale math; Z-up vs Y-up."
+  },
+  "files": {
+    "png": "heightmap_4097x2049.png",
+    "raw": "heightmap_4097x2049.raw",
+    "json": "heightmap_4097x2049.json"
+  }
+}

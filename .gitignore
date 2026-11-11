@@ -1,0 +1,11 @@
+# Large raw caches (kept locally, not on GitHub Pages)
+data/raw/osm/utah-latest.osm.pbf
+data/raw/osm/ogden.osm
+data/raw/dem/*.tif
+data/processed/terrain/_hmap_*.tif
+data/processed/terrain/heightmap_4097x2049.raw
+data/processed/terrain/chunks/
+ogden-environment.zip
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,64 @@
+{
+  "downloaded_at_utc": "2026-11-11T20:32:39Z",
+  "started_at_utc": "2026-11-11T20:32:24Z",
+  "output": "data/raw/dem/ogden_1m_utm12n.tif",
+  "bytes": 123177326,
+  "resolution_m": 1.0,
+  "crs": "EPSG:32612",
+  "terrain_bbox_wgs84": {
+    "south": 41.193,
+    "west": -112.003,
+    "north": 41.247,
+    "east": -111.855,
+    "note": "Terrain-only margin east/south to include Mount Ogden ridge and a thin pad on other sides."
+  },
+  "user_bbox_wgs84": {
+    "south": 41.205,
+    "west": -112.0,
+    "north": 41.245,
+    "east": -111.9,
+    "note": "User-specified box: 17th\u201328th St corridor, Wall Ave/UP tracks to foothills."
+  },
+  "method": "gdal.Warp windowed read via /vsicurl/ of official USGS 3DEP 1 m GeoTIFF tiles (no Google/proprietary sources)",
+  "tiles": [
+    {
+      "title": "USGS one meter x41y457 UT Northern QL1 2018",
+      "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/UT_Northern_QL1_2018/TIFF/USGS_one_meter_x41y457_UT_Northern_QL1_2018.tif",
+      "publicationDate": "2020-03-30",
+      "product": "USGS 3DEP 1-meter DEM",
+      "project": "UT_Northern_QL1_2018",
+      "sizeInBytes": 342517350,
+      "role": "west half, including downtown / valley floor"
+    },
+    {
+      "title": "USGS 1 Meter 12 x42y457 UT_StatewideNCentral_2020_A20",
+      "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/UT_StatewideNCentral_2020_A20/TIFF/USGS_1M_12_x42y457_UT_StatewideNCentral_2020_A20.tif",
+      "publicationDate": "2021-11-21",
+      "product": "USGS 3DEP 1-meter DEM",
+      "project": "UT_StatewideNCentral_2020_A20",
+      "sizeInBytes": 234333877,
+      "role": "east half, foothills and Mount Ogden massif (preferred in overlap)"
+    }
+  ],
+  "raster": {
+    "width": 12470,
+    "height": 5862,
+    "geotransform": [
+      415892.1251364612,
+      1.0,
+      0.0,
+      4566529.415761628,
+      0.0,
+      -1.0
+    ],
+    "projection": "PROJCS[\"WGS 84 / UTM zone 12N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32612\"]]",
+    "nodata": -9999.0,
+    "stats_min_max_mean_std": [
+      1297.536865234375,
+      2918.07275390625,
+      1769.5572599906793,
+      448.6558941840969
+    ]
+  },
+  "license": "Public domain, USGS 3D Elevation Program (3DEP)"
+}

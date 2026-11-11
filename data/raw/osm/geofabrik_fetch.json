@@ -1,0 +1,21 @@
+{
+  "source": "Geofabrik Utah extract (OpenStreetMap, ODbL 1.0)",
+  "download_url": "https://download.geofabrik.de/north-america/us/utah-latest.osm.pbf",
+  "downloaded_at_utc": "2026-11-11T20:36:15Z",
+  "clip_started_utc": "2026-11-11T20:36:40Z",
+  "clip_finished_utc": "2026-11-11T20:36:44Z",
+  "clip_bbox_west_south_east_north": [
+    -112.01,
+    41.188,
+    -111.85,
+    41.252
+  ],
+  "clip_strategy": "complete_ways",
+  "files": {
+    "utah_pbf": "utah-latest.osm.pbf",
+    "clipped_pbf": "ogden.osm.pbf",
+    "clipped_xml": "ogden.osm"
+  },
+  "license": "ODbL 1.0, \u00a9 OpenStreetMap contributors",
+  "note": "Overpass API was tried first (overpass-api.de SSL error, overpass.kumi.systems hung). Fell back to the Geofabrik Utah extract as permitted in the brief."
+}

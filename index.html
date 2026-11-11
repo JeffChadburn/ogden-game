@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Ogden Environment — prototype</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #0b0e14; overflow: hidden; font-family: "Segoe UI", system-ui, sans-serif; }
+    #c { display: block; width: 100%; height: 100%; touch-action: none; }
+    #hud {
+      position: absolute; left: 12px; top: 12px; color: #e8edf4; text-shadow: 0 1px 3px #000;
+      font-size: 13px; line-height: 1.35; pointer-events: none; user-select: none;
+    }
+    #hud b { color: #fff; }
+    #minimap { position: absolute; right: 12px; top: 12px; width: 160px; height: 160px; border: 2px solid rgba(255,255,255,.5);
+      border-radius: 8px; background: #1a1f18; box-shadow: 0 2px 10px rgba(0,0,0,.4); }
+    #credits {
+      display: none; position: absolute; inset: 0; background: rgba(8,10,14,.88); color: #e8edf4;
+      overflow: auto; padding: 48px 24px 80px; z-index: 20;
+    }
+    #credits .inner { max-width: 720px; margin: 0 auto; }
+    #credits h1, #credits h2 { font-weight: 600; }
+    #credits pre { white-space: pre-wrap; background: #161b22; padding: 12px 16px; border-radius: 8px; }
+    #credits button, #help button {
+      background: #2b6cb0; color: #fff; border: 0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px;
+    }
+    #help {
+      display: none; position: absolute; left: 12px; bottom: 12px; right: 12px; max-width: 520px;
+      background: rgba(10,12,16,.82); color: #e8edf4; padding: 12px 16px; border-radius: 8px; font-size: 13px; z-index: 15;
+    }
+    #joy { position: absolute; left: 20px; bottom: 20px; width: 120px; height: 120px; border-radius: 60px;
+      background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.25); touch-action: none; display: none; }
+    #joy .knob { position: absolute; width: 54px; height: 54px; left: 33px; top: 33px; border-radius: 27px;
+      background: rgba(255,255,255,.35); }
+    #lookpad { position: absolute; right: 0; bottom: 0; width: 55%; height: 45%; touch-action: none; display: none; }
+    #bar { position: absolute; right: 12px; bottom: 16px; display: flex; gap: 8px; z-index: 10; }
+    #bar button {
+      background: rgba(20,24,32,.75); color: #e8edf4; border: 1px solid rgba(255,255,255,.25);
+      padding: 8px 10px; border-radius: 6px; cursor: pointer; font-size: 13px;
+    }
+    #load { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      color: #e8edf4; background: #0b0e14; z-index: 30; flex-direction: column; gap: 10px; }
+    #load .spin { width: 36px; height: 36px; border: 3px solid #334; border-top-color: #8ab4f8; border-radius: 50%;
+      animation: sp 0.8s linear infinite; }
+    @keyframes sp { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="load"><div class="spin"></div><div>Loading Ogden terrain…</div></div>
+  <div id="hud"></div>
+  <canvas id="minimap" width="160" height="160"></canvas>
+  <div id="joy"><div class="knob"></div></div>
+  <div id="lookpad"></div>
+  <div id="bar">
+    <button type="button" id="btnView">View (V)</button>
+    <button type="button" id="btnExag">Exag. 1× (E)</button>
+    <button type="button" id="btnCredits">Credits</button>
+    <button type="button" id="btnHelp">Help</button>
+  </div>
+  <div id="help">
+    <p><b>Desktop:</b> click to look, WASD move, Shift walk slower, V first/third person, E vertical exaggeration, C credits, Esc release mouse.</p>
+    <p><b>Phone:</b> left stick to walk (further = faster), right side drag to look, buttons above for view / credits.</p>
+    <p>Start: 25th Street &amp; Washington Boulevard, looking east toward the Wasatch.</p>
+    <button type="button" id="btnHelpClose">Close</button>
+  </div>
+  <div id="credits"><div class="inner">
+    <h1>Credits</h1>
+    <p>A walkable 3D environment of a section of Ogden, Utah, built only from open and public-domain data.</p>
+    <h2>Paste-ready attribution</h2>
+    <pre id="creditBlock"></pre>
+    <p><button type="button" id="btnCopy">Copy</button> <button type="button" id="btnCloseCredits">Close (C)</button></p>
+    <h2>Sources</h2>
+    <p>© OpenStreetMap contributors, ODbL. Elevation: USGS 3D Elevation Program (1-meter 3DEP). All building and ground materials are procedural — no Google, Street View, or proprietary imagery was used. Full details: <a href="data/SOURCES.md" style="color:#8ab4f8">data/SOURCES.md</a> and <a href="CREDITS.md" style="color:#8ab4f8">CREDITS.md</a>.</p>
+  </div></div>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

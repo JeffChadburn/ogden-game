@@ -1,0 +1,3442 @@
+{
+  "chunk_m": 1024,
+  "crs": "EPSG:32612",
+  "origin_utm12n_sw": {
+    "easting": 415892.1251364612,
+    "northing": 4560667.415761628
+  },
+  "chunks": [
+    {
+      "id": "t_0_0",
+      "ix": 0,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 415892.1251364612,
+        "south": 4560665.415761628,
+        "east": 416916.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 0.0,
+        "minz": -2.0,
+        "maxx": 1024.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_0_0_lod0.glb",
+          "bytes": 184096,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_0_0_lod1.glb",
+          "bytes": 47644,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_0_0_lod2.glb",
+          "bytes": 13204,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_1_0",
+      "ix": 1,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 416916.1251364612,
+        "south": 4560665.415761628,
+        "east": 417940.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 1024.0,
+        "minz": -2.0,
+        "maxx": 2048.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_1_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_1_0_lod1.glb",
+          "bytes": 47664,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_1_0_lod2.glb",
+          "bytes": 13224,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_2_0",
+      "ix": 2,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 417940.1251364612,
+        "south": 4560665.415761628,
+        "east": 418964.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 2048.0,
+        "minz": -2.0,
+        "maxx": 3072.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_2_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_2_0_lod1.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_2_0_lod2.glb",
+          "bytes": 13220,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_3_0",
+      "ix": 3,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 418964.1251364612,
+        "south": 4560665.415761628,
+        "east": 419988.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 3072.0,
+        "minz": -2.0,
+        "maxx": 4096.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_3_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_3_0_lod1.glb",
+          "bytes": 47664,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_3_0_lod2.glb",
+          "bytes": 13224,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_4_0",
+      "ix": 4,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 419988.1251364612,
+        "south": 4560665.415761628,
+        "east": 421012.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 4096.0,
+        "minz": -2.0,
+        "maxx": 5120.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_4_0_lod0.glb",
+          "bytes": 184112,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_4_0_lod1.glb",
+          "bytes": 47664,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_4_0_lod2.glb",
+          "bytes": 13224,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_5_0",
+      "ix": 5,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 421012.1251364612,
+        "south": 4560665.415761628,
+        "east": 422036.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 5120.0,
+        "minz": -2.0,
+        "maxx": 6144.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_5_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_5_0_lod1.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_5_0_lod2.glb",
+          "bytes": 13224,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_6_0",
+      "ix": 6,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 422036.1251364612,
+        "south": 4560665.415761628,
+        "east": 423060.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 6144.0,
+        "minz": -2.0,
+        "maxx": 7168.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_6_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_6_0_lod1.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_6_0_lod2.glb",
+          "bytes": 13220,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_7_0",
+      "ix": 7,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 423060.1251364612,
+        "south": 4560665.415761628,
+        "east": 424084.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 7168.0,
+        "minz": -2.0,
+        "maxx": 8192.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_7_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_7_0_lod1.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_7_0_lod2.glb",
+          "bytes": 13224,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_8_0",
+      "ix": 8,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 424084.1251364612,
+        "south": 4560665.415761628,
+        "east": 425108.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 8192.0,
+        "minz": -2.0,
+        "maxx": 9216.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_8_0_lod0.glb",
+          "bytes": 184112,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_8_0_lod1.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_8_0_lod2.glb",
+          "bytes": 13220,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_9_0",
+      "ix": 9,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 425108.1251364612,
+        "south": 4560665.415761628,
+        "east": 426132.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 9216.0,
+        "minz": -2.0,
+        "maxx": 10240.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_9_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_9_0_lod1.glb",
+          "bytes": 47664,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_9_0_lod2.glb",
+          "bytes": 13220,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_10_0",
+      "ix": 10,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 426132.1251364612,
+        "south": 4560665.415761628,
+        "east": 427156.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 10240.0,
+        "minz": -2.0,
+        "maxx": 11264.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_10_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_10_0_lod1.glb",
+          "bytes": 47664,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_10_0_lod2.glb",
+          "bytes": 13224,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_11_0",
+      "ix": 11,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 427156.1251364612,
+        "south": 4560665.415761628,
+        "east": 428180.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 11264.0,
+        "minz": -2.0,
+        "maxx": 12288.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_11_0_lod0.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_11_0_lod1.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_11_0_lod2.glb",
+          "bytes": 13220,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_12_0",
+      "ix": 12,
+      "iy": 0,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 428180.1251364612,
+        "south": 4560665.415761628,
+        "east": 428364.1251364612,
+        "north": 4561689.415761628
+      },
+      "bounds_game": {
+        "minx": 12288.0,
+        "minz": -2.0,
+        "maxx": 12472.0,
+        "maxz": 1022.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_12_0_lod0.glb",
+          "bytes": 33800,
+          "vertices": 780,
+          "faces": 1408
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_12_0_lod1.glb",
+          "bytes": 10528,
+          "vertices": 231,
+          "faces": 384
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_12_0_lod2.glb",
+          "bytes": 3804,
+          "vertices": 68,
+          "faces": 96
+        }
+      ]
+    },
+    {
+      "id": "t_0_1",
+      "ix": 0,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 415892.1251364612,
+        "south": 4561689.415761628,
+        "east": 416916.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 0.0,
+        "minz": 1022.0,
+        "maxx": 1024.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_0_1_lod0.glb",
+          "bytes": 727352,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_0_1_lod1.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_0_1_lod2.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_1_1",
+      "ix": 1,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 416916.1251364612,
+        "south": 4561689.415761628,
+        "east": 417940.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 1024.0,
+        "minz": 1022.0,
+        "maxx": 2048.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_1_1_lod0.glb",
+          "bytes": 727368,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_1_1_lod1.glb",
+          "bytes": 184128,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_1_1_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_2_1",
+      "ix": 2,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 417940.1251364612,
+        "south": 4561689.415761628,
+        "east": 418964.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 2048.0,
+        "minz": 1022.0,
+        "maxx": 3072.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_2_1_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_2_1_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_2_1_lod2.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_3_1",
+      "ix": 3,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 418964.1251364612,
+        "south": 4561689.415761628,
+        "east": 419988.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 3072.0,
+        "minz": 1022.0,
+        "maxx": 4096.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_3_1_lod0.glb",
+          "bytes": 727368,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_3_1_lod1.glb",
+          "bytes": 184128,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_3_1_lod2.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_4_1",
+      "ix": 4,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 419988.1251364612,
+        "south": 4561689.415761628,
+        "east": 421012.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 4096.0,
+        "minz": 1022.0,
+        "maxx": 5120.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_4_1_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_4_1_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_4_1_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_5_1",
+      "ix": 5,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 421012.1251364612,
+        "south": 4561689.415761628,
+        "east": 422036.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 5120.0,
+        "minz": 1022.0,
+        "maxx": 6144.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_5_1_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_5_1_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_5_1_lod2.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_6_1",
+      "ix": 6,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 422036.1251364612,
+        "south": 4561689.415761628,
+        "east": 423060.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 6144.0,
+        "minz": 1022.0,
+        "maxx": 7168.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_6_1_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_6_1_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_6_1_lod2.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_7_1",
+      "ix": 7,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 423060.1251364612,
+        "south": 4561689.415761628,
+        "east": 424084.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 7168.0,
+        "minz": 1022.0,
+        "maxx": 8192.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_7_1_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_7_1_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_7_1_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_8_1",
+      "ix": 8,
+      "iy": 1,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 424084.1251364612,
+        "south": 4561689.415761628,
+        "east": 425108.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 8192.0,
+        "minz": 1022.0,
+        "maxx": 9216.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_8_1_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_8_1_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_8_1_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_9_1",
+      "ix": 9,
+      "iy": 1,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 425108.1251364612,
+        "south": 4561689.415761628,
+        "east": 426132.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 9216.0,
+        "minz": 1022.0,
+        "maxx": 10240.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_9_1_lod0.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_9_1_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_9_1_lod2.glb",
+          "bytes": 13240,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_10_1",
+      "ix": 10,
+      "iy": 1,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 426132.1251364612,
+        "south": 4561689.415761628,
+        "east": 427156.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 10240.0,
+        "minz": 1022.0,
+        "maxx": 11264.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_10_1_lod0.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_10_1_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_10_1_lod2.glb",
+          "bytes": 13236,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_11_1",
+      "ix": 11,
+      "iy": 1,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 427156.1251364612,
+        "south": 4561689.415761628,
+        "east": 428180.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 11264.0,
+        "minz": 1022.0,
+        "maxx": 12288.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_11_1_lod0.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_11_1_lod1.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_11_1_lod2.glb",
+          "bytes": 13236,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_12_1",
+      "ix": 12,
+      "iy": 1,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 428180.1251364612,
+        "south": 4561689.415761628,
+        "east": 428364.1251364612,
+        "north": 4562713.415761628
+      },
+      "bounds_game": {
+        "minx": 12288.0,
+        "minz": 1022.0,
+        "maxx": 12472.0,
+        "maxz": 2046.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_12_1_lod0.glb",
+          "bytes": 33820,
+          "vertices": 780,
+          "faces": 1408
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_12_1_lod1.glb",
+          "bytes": 10544,
+          "vertices": 231,
+          "faces": 384
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_12_1_lod2.glb",
+          "bytes": 3824,
+          "vertices": 68,
+          "faces": 96
+        }
+      ]
+    },
+    {
+      "id": "t_0_2",
+      "ix": 0,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 415892.1251364612,
+        "south": 4562713.415761628,
+        "east": 416916.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 0.0,
+        "minz": 2046.0,
+        "maxx": 1024.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_0_2_lod0.glb",
+          "bytes": 727348,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_0_2_lod1.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_0_2_lod2.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_1_2",
+      "ix": 1,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 416916.1251364612,
+        "south": 4562713.415761628,
+        "east": 417940.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 1024.0,
+        "minz": 2046.0,
+        "maxx": 2048.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_1_2_lod0.glb",
+          "bytes": 727368,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_1_2_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_1_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_2_2",
+      "ix": 2,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 417940.1251364612,
+        "south": 4562713.415761628,
+        "east": 418964.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 2048.0,
+        "minz": 2046.0,
+        "maxx": 3072.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_2_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_2_2_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_2_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_3_2",
+      "ix": 3,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 418964.1251364612,
+        "south": 4562713.415761628,
+        "east": 419988.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 3072.0,
+        "minz": 2046.0,
+        "maxx": 4096.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_3_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_3_2_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_3_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_4_2",
+      "ix": 4,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 419988.1251364612,
+        "south": 4562713.415761628,
+        "east": 421012.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 4096.0,
+        "minz": 2046.0,
+        "maxx": 5120.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_4_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_4_2_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_4_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_5_2",
+      "ix": 5,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 421012.1251364612,
+        "south": 4562713.415761628,
+        "east": 422036.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 5120.0,
+        "minz": 2046.0,
+        "maxx": 6144.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_5_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_5_2_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_5_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_6_2",
+      "ix": 6,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 422036.1251364612,
+        "south": 4562713.415761628,
+        "east": 423060.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 6144.0,
+        "minz": 2046.0,
+        "maxx": 7168.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_6_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_6_2_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_6_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_7_2",
+      "ix": 7,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 423060.1251364612,
+        "south": 4562713.415761628,
+        "east": 424084.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 7168.0,
+        "minz": 2046.0,
+        "maxx": 8192.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_7_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_7_2_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_7_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_8_2",
+      "ix": 8,
+      "iy": 2,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 424084.1251364612,
+        "south": 4562713.415761628,
+        "east": 425108.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 8192.0,
+        "minz": 2046.0,
+        "maxx": 9216.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_8_2_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_8_2_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_8_2_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_9_2",
+      "ix": 9,
+      "iy": 2,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 425108.1251364612,
+        "south": 4562713.415761628,
+        "east": 426132.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 9216.0,
+        "minz": 2046.0,
+        "maxx": 10240.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_9_2_lod0.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_9_2_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_9_2_lod2.glb",
+          "bytes": 13236,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_10_2",
+      "ix": 10,
+      "iy": 2,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 426132.1251364612,
+        "south": 4562713.415761628,
+        "east": 427156.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 10240.0,
+        "minz": 2046.0,
+        "maxx": 11264.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_10_2_lod0.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_10_2_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_10_2_lod2.glb",
+          "bytes": 13240,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_11_2",
+      "ix": 11,
+      "iy": 2,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 427156.1251364612,
+        "south": 4562713.415761628,
+        "east": 428180.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 11264.0,
+        "minz": 2046.0,
+        "maxx": 12288.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_11_2_lod0.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_11_2_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_11_2_lod2.glb",
+          "bytes": 13240,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_12_2",
+      "ix": 12,
+      "iy": 2,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 428180.1251364612,
+        "south": 4562713.415761628,
+        "east": 428364.1251364612,
+        "north": 4563737.415761628
+      },
+      "bounds_game": {
+        "minx": 12288.0,
+        "minz": 2046.0,
+        "maxx": 12472.0,
+        "maxz": 3070.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_12_2_lod0.glb",
+          "bytes": 33820,
+          "vertices": 780,
+          "faces": 1408
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_12_2_lod1.glb",
+          "bytes": 10544,
+          "vertices": 231,
+          "faces": 384
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_12_2_lod2.glb",
+          "bytes": 3820,
+          "vertices": 68,
+          "faces": 96
+        }
+      ]
+    },
+    {
+      "id": "t_0_3",
+      "ix": 0,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 415892.1251364612,
+        "south": 4563737.415761628,
+        "east": 416916.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 0.0,
+        "minz": 3070.0,
+        "maxx": 1024.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_0_3_lod0.glb",
+          "bytes": 727356,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_0_3_lod1.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_0_3_lod2.glb",
+          "bytes": 47660,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_1_3",
+      "ix": 1,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 416916.1251364612,
+        "south": 4563737.415761628,
+        "east": 417940.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 1024.0,
+        "minz": 3070.0,
+        "maxx": 2048.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_1_3_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_1_3_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_1_3_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_2_3",
+      "ix": 2,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 417940.1251364612,
+        "south": 4563737.415761628,
+        "east": 418964.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 2048.0,
+        "minz": 3070.0,
+        "maxx": 3072.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_2_3_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_2_3_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_2_3_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_3_3",
+      "ix": 3,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 418964.1251364612,
+        "south": 4563737.415761628,
+        "east": 419988.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 3072.0,
+        "minz": 3070.0,
+        "maxx": 4096.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_3_3_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_3_3_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_3_3_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_4_3",
+      "ix": 4,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 419988.1251364612,
+        "south": 4563737.415761628,
+        "east": 421012.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 4096.0,
+        "minz": 3070.0,
+        "maxx": 5120.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_4_3_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_4_3_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_4_3_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_5_3",
+      "ix": 5,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 421012.1251364612,
+        "south": 4563737.415761628,
+        "east": 422036.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 5120.0,
+        "minz": 3070.0,
+        "maxx": 6144.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_5_3_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_5_3_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_5_3_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_6_3",
+      "ix": 6,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 422036.1251364612,
+        "south": 4563737.415761628,
+        "east": 423060.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 6144.0,
+        "minz": 3070.0,
+        "maxx": 7168.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_6_3_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_6_3_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_6_3_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_7_3",
+      "ix": 7,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 423060.1251364612,
+        "south": 4563737.415761628,
+        "east": 424084.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 7168.0,
+        "minz": 3070.0,
+        "maxx": 8192.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_7_3_lod0.glb",
+          "bytes": 727368,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_7_3_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_7_3_lod2.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_8_3",
+      "ix": 8,
+      "iy": 3,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 424084.1251364612,
+        "south": 4563737.415761628,
+        "east": 425108.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 8192.0,
+        "minz": 3070.0,
+        "maxx": 9216.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_8_3_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_8_3_lod1.glb",
+          "bytes": 184128,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_8_3_lod2.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_9_3",
+      "ix": 9,
+      "iy": 3,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 425108.1251364612,
+        "south": 4563737.415761628,
+        "east": 426132.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 9216.0,
+        "minz": 3070.0,
+        "maxx": 10240.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_9_3_lod0.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_9_3_lod1.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_9_3_lod2.glb",
+          "bytes": 13244,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_10_3",
+      "ix": 10,
+      "iy": 3,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 426132.1251364612,
+        "south": 4563737.415761628,
+        "east": 427156.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 10240.0,
+        "minz": 3070.0,
+        "maxx": 11264.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_10_3_lod0.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_10_3_lod1.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_10_3_lod2.glb",
+          "bytes": 13244,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_11_3",
+      "ix": 11,
+      "iy": 3,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 427156.1251364612,
+        "south": 4563737.415761628,
+        "east": 428180.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 11264.0,
+        "minz": 3070.0,
+        "maxx": 12288.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_11_3_lod0.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_11_3_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_11_3_lod2.glb",
+          "bytes": 13244,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_12_3",
+      "ix": 12,
+      "iy": 3,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 428180.1251364612,
+        "south": 4563737.415761628,
+        "east": 428364.1251364612,
+        "north": 4564761.415761628
+      },
+      "bounds_game": {
+        "minx": 12288.0,
+        "minz": 3070.0,
+        "maxx": 12472.0,
+        "maxz": 4094.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_12_3_lod0.glb",
+          "bytes": 33820,
+          "vertices": 780,
+          "faces": 1408
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_12_3_lod1.glb",
+          "bytes": 10548,
+          "vertices": 231,
+          "faces": 384
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_12_3_lod2.glb",
+          "bytes": 3824,
+          "vertices": 68,
+          "faces": 96
+        }
+      ]
+    },
+    {
+      "id": "t_0_4",
+      "ix": 0,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 415892.1251364612,
+        "south": 4564761.415761628,
+        "east": 416916.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 0.0,
+        "minz": 4094.0,
+        "maxx": 1024.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_0_4_lod0.glb",
+          "bytes": 727356,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_0_4_lod1.glb",
+          "bytes": 184116,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_0_4_lod2.glb",
+          "bytes": 47664,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_1_4",
+      "ix": 1,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 416916.1251364612,
+        "south": 4564761.415761628,
+        "east": 417940.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 1024.0,
+        "minz": 4094.0,
+        "maxx": 2048.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_1_4_lod0.glb",
+          "bytes": 727368,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_1_4_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_1_4_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_2_4",
+      "ix": 2,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 417940.1251364612,
+        "south": 4564761.415761628,
+        "east": 418964.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 2048.0,
+        "minz": 4094.0,
+        "maxx": 3072.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_2_4_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_2_4_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_2_4_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_3_4",
+      "ix": 3,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 418964.1251364612,
+        "south": 4564761.415761628,
+        "east": 419988.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 3072.0,
+        "minz": 4094.0,
+        "maxx": 4096.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_3_4_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_3_4_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_3_4_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_4_4",
+      "ix": 4,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 419988.1251364612,
+        "south": 4564761.415761628,
+        "east": 421012.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 4096.0,
+        "minz": 4094.0,
+        "maxx": 5120.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_4_4_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_4_4_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_4_4_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_5_4",
+      "ix": 5,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 421012.1251364612,
+        "south": 4564761.415761628,
+        "east": 422036.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 5120.0,
+        "minz": 4094.0,
+        "maxx": 6144.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_5_4_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_5_4_lod1.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_5_4_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_6_4",
+      "ix": 6,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 422036.1251364612,
+        "south": 4564761.415761628,
+        "east": 423060.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 6144.0,
+        "minz": 4094.0,
+        "maxx": 7168.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_6_4_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_6_4_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_6_4_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_7_4",
+      "ix": 7,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 423060.1251364612,
+        "south": 4564761.415761628,
+        "east": 424084.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 7168.0,
+        "minz": 4094.0,
+        "maxx": 8192.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_7_4_lod0.glb",
+          "bytes": 727376,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_7_4_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_7_4_lod2.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_8_4",
+      "ix": 8,
+      "iy": 4,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 424084.1251364612,
+        "south": 4564761.415761628,
+        "east": 425108.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 8192.0,
+        "minz": 4094.0,
+        "maxx": 9216.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_8_4_lod0.glb",
+          "bytes": 727372,
+          "vertices": 16641,
+          "faces": 32768
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_8_4_lod1.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_8_4_lod2.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        }
+      ]
+    },
+    {
+      "id": "t_9_4",
+      "ix": 9,
+      "iy": 4,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 425108.1251364612,
+        "south": 4564761.415761628,
+        "east": 426132.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 9216.0,
+        "minz": 4094.0,
+        "maxx": 10240.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_9_4_lod0.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_9_4_lod1.glb",
+          "bytes": 47680,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_9_4_lod2.glb",
+          "bytes": 13240,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_10_4",
+      "ix": 10,
+      "iy": 4,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 426132.1251364612,
+        "south": 4564761.415761628,
+        "east": 427156.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 10240.0,
+        "minz": 4094.0,
+        "maxx": 11264.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_10_4_lod0.glb",
+          "bytes": 184132,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_10_4_lod1.glb",
+          "bytes": 47676,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_10_4_lod2.glb",
+          "bytes": 13240,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_11_4",
+      "ix": 11,
+      "iy": 4,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 427156.1251364612,
+        "south": 4564761.415761628,
+        "east": 428180.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 11264.0,
+        "minz": 4094.0,
+        "maxx": 12288.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_11_4_lod0.glb",
+          "bytes": 184136,
+          "vertices": 4225,
+          "faces": 8192
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_11_4_lod1.glb",
+          "bytes": 47684,
+          "vertices": 1089,
+          "faces": 2048
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_11_4_lod2.glb",
+          "bytes": 13244,
+          "vertices": 289,
+          "faces": 512
+        }
+      ]
+    },
+    {
+      "id": "t_12_4",
+      "ix": 12,
+      "iy": 4,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 428180.1251364612,
+        "south": 4564761.415761628,
+        "east": 428364.1251364612,
+        "north": 4565785.415761628
+      },
+      "bounds_game": {
+        "minx": 12288.0,
+        "minz": 4094.0,
+        "maxx": 12472.0,
+        "maxz": 5118.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_12_4_lod0.glb",
+          "bytes": 33820,
+          "vertices": 780,
+          "faces": 1408
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_12_4_lod1.glb",
+          "bytes": 10548,
+          "vertices": 231,
+          "faces": 384
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_12_4_lod2.glb",
+          "bytes": 3820,
+          "vertices": 68,
+          "faces": 96
+        }
+      ]
+    },
+    {
+      "id": "t_0_5",
+      "ix": 0,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 415892.1251364612,
+        "south": 4565785.415761628,
+        "east": 416916.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 0.0,
+        "minz": 5118.0,
+        "maxx": 1024.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_0_5_lod0.glb",
+          "bytes": 529520,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_0_5_lod1.glb",
+          "bytes": 133072,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_0_5_lod2.glb",
+          "bytes": 34812,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_1_5",
+      "ix": 1,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 416916.1251364612,
+        "south": 4565785.415761628,
+        "east": 417940.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 1024.0,
+        "minz": 5118.0,
+        "maxx": 2048.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_1_5_lod0.glb",
+          "bytes": 529536,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_1_5_lod1.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_1_5_lod2.glb",
+          "bytes": 34824,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_2_5",
+      "ix": 2,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 417940.1251364612,
+        "south": 4565785.415761628,
+        "east": 418964.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 2048.0,
+        "minz": 5118.0,
+        "maxx": 3072.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_2_5_lod0.glb",
+          "bytes": 529536,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_2_5_lod1.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_2_5_lod2.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_3_5",
+      "ix": 3,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 418964.1251364612,
+        "south": 4565785.415761628,
+        "east": 419988.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 3072.0,
+        "minz": 5118.0,
+        "maxx": 4096.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_3_5_lod0.glb",
+          "bytes": 529532,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_3_5_lod1.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_3_5_lod2.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_4_5",
+      "ix": 4,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 419988.1251364612,
+        "south": 4565785.415761628,
+        "east": 421012.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 4096.0,
+        "minz": 5118.0,
+        "maxx": 5120.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_4_5_lod0.glb",
+          "bytes": 529532,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_4_5_lod1.glb",
+          "bytes": 133084,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_4_5_lod2.glb",
+          "bytes": 34824,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_5_5",
+      "ix": 5,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 421012.1251364612,
+        "south": 4565785.415761628,
+        "east": 422036.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 5120.0,
+        "minz": 5118.0,
+        "maxx": 6144.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_5_5_lod0.glb",
+          "bytes": 529536,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_5_5_lod1.glb",
+          "bytes": 133080,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_5_5_lod2.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_6_5",
+      "ix": 6,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 422036.1251364612,
+        "south": 4565785.415761628,
+        "east": 423060.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 6144.0,
+        "minz": 5118.0,
+        "maxx": 7168.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_6_5_lod0.glb",
+          "bytes": 529536,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_6_5_lod1.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_6_5_lod2.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_7_5",
+      "ix": 7,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 423060.1251364612,
+        "south": 4565785.415761628,
+        "east": 424084.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 7168.0,
+        "minz": 5118.0,
+        "maxx": 8192.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_7_5_lod0.glb",
+          "bytes": 529536,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_7_5_lod1.glb",
+          "bytes": 133084,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_7_5_lod2.glb",
+          "bytes": 34824,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_8_5",
+      "ix": 8,
+      "iy": 5,
+      "zone": "city",
+      "bounds_utm": {
+        "west": 424084.1251364612,
+        "south": 4565785.415761628,
+        "east": 425108.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 8192.0,
+        "minz": 5118.0,
+        "maxx": 9216.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 8.0,
+          "file": "t_8_5_lod0.glb",
+          "bytes": 529532,
+          "vertices": 12126,
+          "faces": 23808
+        },
+        {
+          "lod": 1,
+          "spacing_m": 16.0,
+          "file": "t_8_5_lod1.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 2,
+          "spacing_m": 32.0,
+          "file": "t_8_5_lod2.glb",
+          "bytes": 34824,
+          "vertices": 792,
+          "faces": 1472
+        }
+      ]
+    },
+    {
+      "id": "t_9_5",
+      "ix": 9,
+      "iy": 5,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 425108.1251364612,
+        "south": 4565785.415761628,
+        "east": 426132.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 9216.0,
+        "minz": 5118.0,
+        "maxx": 10240.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_9_5_lod0.glb",
+          "bytes": 133092,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_9_5_lod1.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_9_5_lod2.glb",
+          "bytes": 10348,
+          "vertices": 221,
+          "faces": 384
+        }
+      ]
+    },
+    {
+      "id": "t_10_5",
+      "ix": 10,
+      "iy": 5,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 426132.1251364612,
+        "south": 4565785.415761628,
+        "east": 427156.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 10240.0,
+        "minz": 5118.0,
+        "maxx": 11264.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_10_5_lod0.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_10_5_lod1.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_10_5_lod2.glb",
+          "bytes": 10348,
+          "vertices": 221,
+          "faces": 384
+        }
+      ]
+    },
+    {
+      "id": "t_11_5",
+      "ix": 11,
+      "iy": 5,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 427156.1251364612,
+        "south": 4565785.415761628,
+        "east": 428180.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 11264.0,
+        "minz": 5118.0,
+        "maxx": 12288.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_11_5_lod0.glb",
+          "bytes": 133088,
+          "vertices": 3055,
+          "faces": 5888
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_11_5_lod1.glb",
+          "bytes": 34828,
+          "vertices": 792,
+          "faces": 1472
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_11_5_lod2.glb",
+          "bytes": 10348,
+          "vertices": 221,
+          "faces": 384
+        }
+      ]
+    },
+    {
+      "id": "t_12_5",
+      "ix": 12,
+      "iy": 5,
+      "zone": "mountain",
+      "bounds_utm": {
+        "west": 428180.1251364612,
+        "south": 4565785.415761628,
+        "east": 428364.1251364612,
+        "north": 4566529.415761628
+      },
+      "bounds_game": {
+        "minx": 12288.0,
+        "minz": 5118.0,
+        "maxx": 12472.0,
+        "maxz": 5862.0
+      },
+      "lods": [
+        {
+          "lod": 0,
+          "spacing_m": 16.0,
+          "file": "t_12_5_lod0.glb",
+          "bytes": 24740,
+          "vertices": 564,
+          "faces": 1012
+        },
+        {
+          "lod": 1,
+          "spacing_m": 32.0,
+          "file": "t_12_5_lod1.glb",
+          "bytes": 7988,
+          "vertices": 168,
+          "faces": 276
+        },
+        {
+          "lod": 2,
+          "spacing_m": 64.0,
+          "file": "t_12_5_lod2.glb",
+          "bytes": 3212,
+          "vertices": 52,
+          "faces": 72
+        }
+      ]
+    }
+  ]
+}

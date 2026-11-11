@@ -1,0 +1,166 @@
+{
+  "layers": {
+    "stations": {
+      "count": 1,
+      "bytes": 626
+    },
+    "peaks": {
+      "count": 8,
+      "bytes": 2141
+    },
+    "trees": {
+      "count": 644,
+      "bytes": 143889
+    },
+    "highways": {
+      "count": 5758,
+      "bytes": 2659455
+    },
+    "railways": {
+      "count": 197,
+      "bytes": 136777
+    },
+    "waterways": {
+      "count": 102,
+      "bytes": 67732
+    },
+    "landuse": {
+      "count": 2859,
+      "bytes": 2040030
+    },
+    "buildings": {
+      "count": 10515,
+      "bytes": 5399891
+    },
+    "water": {
+      "count": 32,
+      "bytes": 46233
+    }
+  },
+  "height_stats": {
+    "buildings": 10515,
+    "with_height": 6,
+    "with_levels": 130,
+    "with_roof_shape": 3,
+    "buildings_in_extract": 16133
+  },
+  "source": "geofabrik clipped PBF via GDAL OSM driver",
+  "verification": {
+    "17th_street": {
+      "west": -112.0092878,
+      "south": 41.2363316,
+      "east": -111.9652361,
+      "north": 41.2375699,
+      "n_features": 10,
+      "names": {
+        "West 17th Street": 8,
+        "17th Street": 2
+      }
+    },
+    "28th_street": {
+      "west": -112.0076168,
+      "south": 41.2131711,
+      "east": -111.9296063,
+      "north": 41.2148551,
+      "n_features": 12,
+      "names": {
+        "28th Street": 8,
+        "West 28th Street": 4
+      }
+    },
+    "wall_avenue": {
+      "west": -111.9795286,
+      "south": 41.1924998,
+      "east": -111.9780546,
+      "north": 41.252308,
+      "n_features": 93,
+      "names": {
+        "Wall Avenue": 93
+      }
+    },
+    "washington_blvd": {
+      "west": -111.971303,
+      "south": 41.184699,
+      "east": -111.9696904,
+      "north": 41.2526374,
+      "n_features": 89,
+      "names": {
+        "Washington Boulevard": 89
+      }
+    },
+    "harrison_blvd": {
+      "west": -111.9489414,
+      "south": 41.1876717,
+      "east": -111.9452504,
+      "north": 41.2592706,
+      "n_features": 56,
+      "names": {
+        "Harrison Boulevard": 55,
+        "Harrison Avenue": 1
+      }
+    },
+    "25th_street": {
+      "west": -112.0013182,
+      "south": 41.2201673,
+      "east": -111.932519,
+      "north": 41.2210249,
+      "n_features": 22,
+      "names": {
+        "25th Street": 21,
+        "West 25th Street": 1
+      }
+    },
+    "peaks": [
+      {
+        "name": "Malans Peak",
+        "ele": "2109",
+        "lon": -111.9185515,
+        "lat": 41.2071659
+      },
+      {
+        "name": "Sardine Peak",
+        "ele": "2282",
+        "lon": -111.8685507,
+        "lat": 41.2421651
+      },
+      {
+        "name": "Allen Peak",
+        "ele": "2885",
+        "lon": -111.8843057,
+        "lat": 41.2042382
+      },
+      {
+        "name": "Mount Ogden",
+        "ele": "2917",
+        "lon": -111.882208,
+        "lat": 41.1999128
+      },
+      {
+        "name": "No Name Peak",
+        "ele": "2762",
+        "lon": -111.8804936,
+        "lat": 41.2096032
+      },
+      {
+        "name": null,
+        "ele": "2259",
+        "lon": -111.9081515,
+        "lat": 41.2203872
+      },
+      {
+        "name": "Taylor Peak",
+        "ele": "2315",
+        "lon": -111.9005005,
+        "lat": 41.2229292
+      },
+      {
+        "name": null,
+        "ele": "2356",
+        "lon": -111.8954461,
+        "lat": 41.2196951
+      }
+    ],
+    "user_bbox_kept": true,
+    "reason": "User bbox N 41.245 / S 41.205 / W -112.000 / E -111.900 already covers the 17th\u201328th Street corridor (17th ~41.237, 28th ~41.214) and Wall Avenue (~-111.979) plus the UP tracks to the west. No adjustment was required. A terrain-only margin (S 41.193, E -111.855, padded N/W) was added because Mount Ogden (41.1999 N, 111.8822 W, 2917 m) sits just southeast of the user box; without it the Wasatch silhouette would be truncated."
+  }
+}
