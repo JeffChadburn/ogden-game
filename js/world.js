@@ -13,24 +13,34 @@ export class World {
     this.exag = 1;
     this.buildingBoxes = [];
     this.maxLoad = 7; // chunks radius in 256 m units ~ 900 m
+    this.maps = {};
   }
 
   async init() {
-    const [hm, splat, mask, boxes, trees] = await Promise.all([
-      this._loadHeightfield(),
-      this._loadTexture("data/processed/terrain/splat_rgba.png"),
-      this._loadTexture("data/processed/terrain/terrain_albedo.png"),
-      fetch("data/processed/collision_buildings.json").then((r) => r.json()).catch(() => ({ boxes: [] })),
-      fetch("data/processed/trees.json").then((r) => r.json()).catch(() => ({ points: [] })),
-    ]);
+    const [hm, splat, boxes, trees, grass, rock, dirt, scrub, pave, asphalt, sidewalk, ballast, wood, water] =
+      await Promise.all([
+        this._loadHeightfield(),
+        this._loadTexture("data/processed/terrain/splat_rgba.png"),
+        fetch("data/processed/collision_buildings.json").then((r) => r.json()).catch(() => ({ boxes: [] })),
+        fetch("data/processed/trees.json").then((r) => r.json()).catch(() => ({ points: [] })),
+        this._loadTiled("assets/textures/grass.png"),
+        this._loadTiled("assets/textures/rock.png"),
+        this._loadTiled("assets/textures/dirt.png"),
+        this._loadTiled("assets/textures/scrub.png"),
+        this._loadTiled("assets/textures/pavement.png"),
+        this._loadTiled("assets/textures/asphalt.png"),
+        this._loadTiled("assets/textures/sidewalk.png"),
+        this._loadTiled("assets/textures/ballast.png"),
+        this._loadTiled("assets/textures/wood.png"),
+        this._loadTiled("assets/textures/water.png"),
+      ]);
     this.height = hm;
     this.splatTex = splat;
-    this.maskTex = mask;
-    for (const t of [this.splatTex, this.maskTex]) {
-      t.colorSpace = THREE.SRGBColorSpace;
-      t.wrapS = t.wrapT = THREE.ClampToEdgeWrapping;
-      t.needsUpdate = true;
-    }
+    // Splat channels are blend weights, not color — keep them linear.
+    this.splatTex.colorSpace = THREE.NoColorSpace;
+    this.splatTex.wrapS = this.splatTex.wrapT = THREE.ClampToEdgeWrapping;
+    this.splatTex.needsUpdate = true;
+    this.maps = { grass, rock, dirt, scrub, pave, asphalt, sidewalk, ballast, wood, water };
     this.buildingBoxes = boxes.boxes || [];
     this.treePts = trees.points || [];
     this._buildTerrainTiles();
@@ -68,6 +78,18 @@ export class World {
   _loadTexture(url) {
     return new Promise((resolve, reject) => {
       new THREE.TextureLoader().load(url, resolve, undefined, reject);
+    });
+  }
+
+  _loadTiled(url) {
+    return new Promise((resolve, reject) => {
+      new THREE.TextureLoader().load(url, (t) => {
+        t.wrapS = t.wrapT = THREE.RepeatWrapping;
+        t.colorSpace = THREE.SRGBColorSpace;
+        t.anisotropy = 4;
+        t.needsUpdate = true;
+        resolve(t);
+      }, undefined, reject);
     });
   }
 
@@ -160,14 +182,110 @@ export class World {
   }
 
   _terrainMaterial() {
-    // landuse_mask is an RGB preview (grass/rock/urban/dirt). Reliable in all
-    // browsers; splat_rgba is also available for engine import.
+    // Splat RGBA = grass, rock, urban/pavement, dirt/scrub. Detail is tiled
+    // procedural textures; rock/scrub use triplanar + slope so steep foothills
+    // don't stretch a top-down map into streaks.
     const mat = new THREE.MeshStandardMaterial({
-      map: this.maskTex || this.splatTex,
+      map: this.splatTex,
       color: 0xffffff,
-      roughness: 0.92,
-      metalness: 0.02,
+      roughness: 0.94,
+      metalness: 0.0,
     });
+    const maps = this.maps;
+    const splat = this.splatTex;
+    mat.onBeforeCompile = (shader) => {
+      shader.uniforms.uSplat = { value: splat };
+      shader.uniforms.uGrass = { value: maps.grass };
+      shader.uniforms.uRock = { value: maps.rock };
+      shader.uniforms.uDirt = { value: maps.dirt };
+      shader.uniforms.uScrub = { value: maps.scrub };
+      shader.uniforms.uPave = { value: maps.pave };
+      shader.vertexShader = `
+        varying vec3 vWp;
+        varying vec3 vWn;
+      ` + shader.vertexShader.replace(
+        "#include <project_vertex>",
+        `#include <project_vertex>
+        vWp = (modelMatrix * vec4(transformed, 1.0)).xyz;
+        vWn = normalize(mat3(modelMatrix) * objectNormal);`
+      );
+      shader.fragmentShader = `
+        uniform sampler2D uSplat;
+        uniform sampler2D uGrass;
+        uniform sampler2D uRock;
+        uniform sampler2D uDirt;
+        uniform sampler2D uScrub;
+        uniform sampler2D uPave;
+        varying vec3 vWp;
+        varying vec3 vWn;
+      ` + shader.fragmentShader.replace(
+        "#include <map_fragment>",
+        `
+        #ifdef USE_MAP
+        {
+          vec3 wp = vWp;
+          vec3 wn = normalize(vWn);
+          vec3 bn = abs(wn);
+          bn = pow(max(bn, vec3(0.0)), vec3(4.0));
+          bn /= max(bn.x + bn.y + bn.z, 1e-4);
+
+          float sc = 16.0;
+          vec2 uvX = wp.zy / sc;
+          vec2 uvY = wp.xz / sc;
+          vec2 uvZ = wp.xy / sc;
+
+          vec3 grassXZ = texture2D(uGrass, uvY).rgb;
+          vec3 dirtXZ  = texture2D(uDirt,  uvY).rgb;
+          vec3 scrubXZ = texture2D(uScrub, uvY).rgb;
+          vec3 paveXZ  = texture2D(uPave,  uvY).rgb;
+          // Triplanar rock (the layer used on steep Wasatch slopes).
+          vec3 rockC =
+            texture2D(uRock, uvX).rgb * bn.x +
+            texture2D(uRock, uvY).rgb * bn.y +
+            texture2D(uRock, uvZ).rgb * bn.z;
+          // Cheap biplanar scrub: XZ plus the dominant vertical wall.
+          vec3 scrubC = scrubXZ * bn.y +
+            texture2D(uScrub, mix(uvX, uvZ, step(bn.x, bn.z))).rgb * (1.0 - bn.y);
+
+          // Dry, muted northern-Utah tints.
+          grassXZ *= vec3(1.22, 0.88, 0.58);
+          dirtXZ  *= vec3(1.08, 0.96, 0.78);
+          paveXZ  *= vec3(0.90, 0.90, 0.88);
+          rockC   *= vec3(1.04, 1.00, 0.92);
+          scrubC  *= vec3(1.12, 0.95, 0.68);
+          scrubXZ *= vec3(1.12, 0.95, 0.68);
+
+          vec4 s = textureLod(uSplat, vMapUv, 2.0);
+          float wGrass = s.r;
+          float wRock  = s.g;
+          float wUrban = s.b;
+          float wDirtA = s.a;
+          float steep = 1.0 - clamp(wn.y, 0.0, 1.0);
+          float elevN = clamp((wp.y - 1400.0) / 900.0, 0.0, 1.0);
+          float scrubMix = clamp(elevN * 0.7 + steep * 0.55, 0.0, 1.0);
+          vec3 dirtScrub = mix(dirtXZ, mix(scrubXZ, scrubC, smoothstep(0.25, 0.7, steep)), scrubMix);
+
+          // City lots should read as yards, not a solid urban debug color.
+          vec3 urbanC = dirtScrub * 0.30 + grassXZ * 0.48 + paveXZ * 0.22;
+
+          float sum = wGrass + wRock + wUrban + wDirtA;
+          vec3 albedo = dirtScrub;
+          if (sum > 0.04) {
+            albedo = (wGrass * grassXZ + wRock * rockC + wUrban * urbanC + wDirtA * dirtScrub) / max(sum, 1e-4);
+            albedo = mix(dirtScrub, albedo, clamp(sum, 0.0, 1.0));
+          }
+          // Slope-based override so steep faces never show stretched XZ grass/dirt.
+          float slopeBlend = smoothstep(0.26, 0.70, steep);
+          vec3 slopeCol = mix(scrubC, rockC, clamp(elevN * 1.15 + 0.15, 0.0, 1.0));
+          albedo = mix(albedo, slopeCol, slopeBlend * 0.9);
+
+          diffuseColor *= vec4(albedo, 1.0);
+        }
+        #endif
+        `
+      );
+    };
+    mat.customProgramCacheKey = () => "ogden-terrain-splat-triplanar-v1";
     return mat;
   }
 
@@ -252,23 +370,16 @@ export class World {
   _loadGlb(url, kind, group) {
     return new Promise((resolve) => {
       this.loader.load(url, (gltf) => {
-        const mat = materialFor(kind);
+        const mat = materialFor(kind, this.maps);
         gltf.scene.traverse((o) => {
           if (o.isMesh) {
-            if (kind.startsWith("buildings_")) {
-              // Keep exported vertex colors (procedural facade tints).
-              const m = o.material;
-              if (m) {
-                m.vertexColors = true;
-                m.side = THREE.DoubleSide;
-                m.roughness = 0.82;
-                m.metalness = kind.includes("industrial") ? 0.2 : 0.04;
-              }
-            } else if (mat) {
-              o.material = mat;
-              o.material.side = THREE.DoubleSide;
-            }
-            o.castShadow = kind.startsWith("buildings");
+            // Feature GLBs were exported with vertex colors but no UVs or
+            // normals (trimesh TextureVisuals dropped them). Rebuild both so
+            // tiled maps and Lambert lighting work without a pipeline rerun.
+            if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals();
+            if (!o.geometry.attributes.uv) this._ensureUv(o.geometry, kind);
+            if (mat) o.material = mat;
+            if (kind.startsWith("buildings_")) o.castShadow = true;
             o.receiveShadow = true;
           }
         });
@@ -276,6 +387,33 @@ export class World {
         resolve();
       }, undefined, (err) => { console.warn(url, err); resolve(); });
     });
+  }
+
+  _ensureUv(geo, kind) {
+    const pos = geo.attributes.position;
+    const nrm = geo.attributes.normal;
+    const uv = new Float32Array(pos.count * 2);
+    const isBld = kind.startsWith("buildings_");
+    const scale = (kind === "roads" || kind === "sidewalks") ? 8 : 16;
+    for (let i = 0; i < pos.count; i++) {
+      const x = pos.getX(i), y = pos.getY(i), z = pos.getZ(i);
+      if (isBld && nrm) {
+        const ny = nrm.getY(i);
+        if (Math.abs(ny) < 0.55) {
+          const nx = nrm.getX(i), nz = nrm.getZ(i);
+          // Horizontal tangent perpendicular to the wall normal.
+          uv[i * 2] = (x * nz - z * nx) / 4.0;
+          uv[i * 2 + 1] = y / 3.2;
+        } else {
+          uv[i * 2] = x / 8.0;
+          uv[i * 2 + 1] = z / 8.0;
+        }
+      } else {
+        uv[i * 2] = x / scale;
+        uv[i * 2 + 1] = z / scale;
+      }
+    }
+    geo.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
   }
 
   collideXZ(x, z, radius, y) {
@@ -303,39 +441,94 @@ export class World {
 }
 
 const MATS = {};
-function materialFor(kind) {
+function materialFor(kind, maps) {
   if (MATS[kind]) return MATS[kind];
-  const L = new THREE.TextureLoader();
-  const wrap = (t) => { t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace; return t; };
+  maps = maps || {};
   let mat;
   if (kind === "roads") {
-    mat = new THREE.MeshStandardMaterial({ map: wrap(L.load("assets/textures/asphalt.png")), color: 0x5a5a60, roughness: 0.85, metalness: 0 });
+    mat = makeRoadMaterial(maps.asphalt);
   } else if (kind === "sidewalks") {
-    mat = new THREE.MeshStandardMaterial({ map: wrap(L.load("assets/textures/sidewalk.png")), roughness: 0.9, metalness: 0 });
+    mat = new THREE.MeshLambertMaterial({
+      map: maps.sidewalk,
+      color: 0xe8e6e0,
+      side: THREE.DoubleSide,
+      polygonOffset: true,
+      polygonOffsetFactor: -3,
+      polygonOffsetUnits: -3,
+    });
   } else if (kind === "rail_ballast") {
-    mat = new THREE.MeshStandardMaterial({ map: wrap(L.load("assets/textures/ballast.png")), roughness: 0.95, metalness: 0 });
+    mat = new THREE.MeshStandardMaterial({
+      map: maps.ballast, roughness: 0.95, metalness: 0,
+      polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2,
+    });
   } else if (kind === "rail_steel") {
     mat = new THREE.MeshStandardMaterial({ color: 0xb0b6bc, roughness: 0.35, metalness: 0.8 });
   } else if (kind === "rail_sleeper") {
-    mat = new THREE.MeshStandardMaterial({ map: wrap(L.load("assets/textures/wood.png")), roughness: 0.9, metalness: 0 });
+    mat = new THREE.MeshStandardMaterial({ map: maps.wood, roughness: 0.9, metalness: 0 });
   } else if (kind === "water") {
     mat = new THREE.MeshStandardMaterial({
-      map: wrap(L.load("assets/textures/water.png")), color: 0x4a7aa8,
+      map: maps.water, color: 0x4a7aa8,
       roughness: 0.25, metalness: 0.1, transparent: true, opacity: 0.88,
     });
   } else if (kind === "parks" || kind === "forest") {
-    mat = new THREE.MeshStandardMaterial({ map: wrap(L.load("assets/textures/grass.png")), roughness: 0.95, metalness: 0 });
+    mat = new THREE.MeshLambertMaterial({ map: maps.grass, color: 0xc8c4a0, side: THREE.DoubleSide });
   } else if (kind.startsWith("buildings_")) {
-    const mapName = {
-      buildings_residential: "brick.png",
-      buildings_commercial: "concrete.png",
-      buildings_industrial: "metal.png",
-      buildings_civic: "concrete.png",
-    }[kind] || "brick.png";
-    const map = wrap(L.load("assets/textures/" + mapName));
-    mat = new THREE.MeshStandardMaterial({ map, roughness: 0.8, metalness: kind.includes("industrial") ? 0.25 : 0.05 });
-    // window tint via simple emissive? skip — UV grid already on mesh
+    mat = makeBuildingMaterial(kind);
   }
   MATS[kind] = mat || null;
   return MATS[kind];
+}
+
+
+
+function makeRoadMaterial(asphaltMap) {
+  // Lambert + a lifted asphalt map: MeshStandard + ACES crushed shaded
+  // carriageways to black, especially at street level looking east.
+  const mat = new THREE.MeshLambertMaterial({
+    map: asphaltMap,
+    color: 0xe8e8ea,
+    side: THREE.DoubleSide,
+    polygonOffset: true,
+    polygonOffsetFactor: -2,
+    polygonOffsetUnits: -2,
+  });
+  return mat;
+}
+
+function makeBuildingMaterial(kind) {
+  const industrial = kind.includes("industrial");
+  // Lambert keeps shaded facades readable (the GLBs were effectively unlit).
+  // Window bays come from a tiling canvas texture; wall UVs are already in
+  // 4 m bays / floors. Roofs use world XZ UVs and pick up a faint grid only.
+  const mat = new THREE.MeshLambertMaterial({
+    map: windowMap(),
+    color: 0xffffff,
+    vertexColors: true,
+    side: THREE.DoubleSide,
+  });
+  mat.customProgramCacheKey = () => "ogden-facade-windowtex-v1-" + kind;
+  return mat;
+}
+
+function windowMap() {
+  if (windowMap._tex) return windowMap._tex;
+  const c = document.createElement("canvas");
+  c.width = 64; c.height = 64;
+  const g = c.getContext("2d");
+  g.fillStyle = "#ffffff";
+  g.fillRect(0, 0, 64, 64);
+  g.fillStyle = "#3a424a";
+  g.fillRect(11, 18, 42, 32);
+  g.fillStyle = "#4a545c";
+  g.fillRect(13, 20, 18, 13);
+  g.fillRect(33, 20, 18, 13);
+  g.fillRect(13, 35, 18, 13);
+  g.fillRect(33, 35, 18, 13);
+  const tex = new THREE.CanvasTexture(c);
+  tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 2;
+  tex.needsUpdate = true;
+  windowMap._tex = tex;
+  return tex;
 }

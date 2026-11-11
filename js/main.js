@@ -18,8 +18,9 @@ renderer.setSize(innerWidth, innerHeight, false);
 renderer.shadowMap.enabled = false;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
+renderer.toneMappingExposure = 1.2;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
+
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x9eb6cc);
@@ -27,7 +28,7 @@ scene.background = new THREE.Color(0x9eb6cc);
 scene.fog = new THREE.FogExp2(0xb7c4d4, 0.00022);
 
 const camera = new THREE.PerspectiveCamera(65, innerWidth / innerHeight, 0.4, 28000);
-const sun = new THREE.DirectionalLight(0xfff1d6, 1.6);
+const sun = new THREE.DirectionalLight(0xfff1d6, 1.25);
 sun.position.set(-1200, 1800, 400); // west-ish afternoon, mountains catch light from the side
 sun.castShadow = false;
 sun.shadow.mapSize.set(2048, 2048);
@@ -36,8 +37,8 @@ sun.shadow.camera.far = 8000;
 sun.shadow.camera.left = sun.shadow.camera.bottom = -1500;
 sun.shadow.camera.right = sun.shadow.camera.top = 1500;
 scene.add(sun);
-scene.add(new THREE.AmbientLight(0x99a8b8, 0.7));
-const hemi = new THREE.HemisphereLight(0xd8e8ff, 0x7a6a50, 0.85);
+scene.add(new THREE.AmbientLight(0x99a8b8, 1.05));
+const hemi = new THREE.HemisphereLight(0xd8e8ff, 0x7a6a50, 1.15);
 scene.add(hemi);
 
 const input = createInput(canvas);
@@ -75,12 +76,20 @@ async function start() {
   if (shot === "aerial" || shot === "overview") {
     firstPerson = false;
   }
+  if (shot === "foothills") {
+    firstPerson = true;
+    // Mid-east city, elevated view toward the Wasatch slopes (screenshot only).
+    player.x = s.x + 1200;
+    player.z = s.z;
+    player.y = s.y;
+  }
   if (shot === "phone") {
     renderer.setSize(390, 844, false);
     camera.aspect = 390 / 844;
     camera.updateProjectionMatrix();
   }
-  await world.preloadAround(player.x, player.z, shot === "aerial" || shot === "overview" ? 1100 : 650);
+  const preloadR = (shot === "aerial" || shot === "overview") ? 1100 : (shot === "foothills" ? 900 : 650);
+  await world.preloadAround(player.x, player.z, preloadR);
   loadEl.style.display = "none";
   if (params.get("help") !== "0") document.getElementById("help").style.display = "block";
   world.updateStreaming(player.x, player.z);
@@ -111,6 +120,13 @@ function step(dt) {
     const s = manifest.start.game;
     camera.position.set(s.x - 400, s.y + 2200, s.z - 200);
     camera.lookAt(s.x + 3500, s.y + 400, s.z);
+    return;
+  }
+  if (shot === "foothills") {
+    const s = manifest.start.game;
+    // High enough to clear the east-bench feature shelf (~1769 m) and show slope texture.
+    camera.position.set(s.x + 400, 2450, s.z - 150);
+    camera.lookAt(s.x + 6500, 2000, s.z + 250);
     return;
   }
 
@@ -197,7 +213,7 @@ function drawMinimap() {
   // land tint
   if (!drawMinimap._img) {
     const img = new Image();
-    img.src = "data/processed/terrain/landuse_mask.png";
+    img.src = "data/processed/terrain/minimap_color.png";
     img.onload = () => { drawMinimap._img = img; };
   }
   if (drawMinimap._img && world?.height) {

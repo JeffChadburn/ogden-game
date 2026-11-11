@@ -37,7 +37,7 @@ All tools live in `tools/` and write under `data/` and `export/`.
 3. `tools/generate_textures.py` — procedural tileable materials (grass, rock, dirt, pavement, brick, etc.).
 4. `tools/build_terrain.py` — 16-bit heightmaps (4097×2049 Unity-oriented + a 2049×1025 web/collision map, PNG + RAW + sidecar JSON), hillshade, RGBA splat and landuse preview, terrain GLB chunks with LODs (8 m in the city, coarser on the mountains).
 5. `tools/build_features.py` — roads as draped ribbons with width-by-highway-type and sidewalks on urban streets; intersection patches at major junctions; UP rails as ballast, sleepers, and steel; extruded buildings (height tag → levels × 3.2 m → type/area defaults; flat or pitched roofs; procedural facade classes); parks and water from OSM; tree points.
-6. Export pack: `export/` and `ogden-environment.zip`. Import notes: `docs/IMPORT.md`. Starter Unity streamer: `unity/ChunkStreamer.cs` (not editor-tested).
+6. Export pack: `export/` and `ogden-environment.zip`. Import notes: `docs/IMPORT.md`. Starter Unity streamer: `unity/ChunkStreamer.cs` (not editor-tested). Unreal Engine 5 pack: `export_unreal/` and `ogden-unreal.zip`; beginner setup and exact Landscape numbers: [`docs/UNREAL_SETUP.md`](docs/UNREAL_SETUP.md) (import script untested in the editor).
 
 Coordinates: EPSG:32612, origin at the DEM southwest corner, X east, Y up, Z north, meters.
 
@@ -49,12 +49,26 @@ Coordinates: EPSG:32612, origin at the DEM southwest corner, X east, Y up, Z nor
 - 1 m 3DEP terrain, OSM roads / rail / buildings / parks / water, procedural materials, chunk streaming, phone and desktop controls, credits screen, engine export folder and zip.
 - GitHub Pages at `jeffchadburn.github.io/ogden-game`.
 
+### Unreal Engine 5 pack — 2026-11-11
+
+- First-pass UE5 pack in `export_unreal/` (zipped as `ogden-unreal.zip`): 4033×4033 16-bit landscape and weight layers, glTF meshes in centimeters / Z-up, tree instances, and `tools/unreal_import.py`. Beginner steps and exact import numbers: `docs/UNREAL_SETUP.md`. The import script has not been run inside the Unreal Editor.
+
+
+### Visual pass — 2026-11-11
+
+- Roads near the camera no longer render black. The feature GLBs had no UVs or normals (dropped on export), so lit materials and textures were sampling as black; both are now generated at load time. Asphalt was lifted so sRGB + ACES still reads as pavement, sidewalks use a concrete slab texture, and polygon offset reduces z-fighting.
+- Landuse/debug ground colors were replaced with muted, tiled procedural materials (dry grass, dirt, pavement, scrub, rock) blended from the existing RGBA splat.
+- Foothill streaks from stretching a top-down map on steep slopes are reduced with triplanar rock/scrub and a slope-based blend to rock on steep faces.
+- Cheap procedural window bays on building facades (runtime wall UVs in 4 m bays / floors). No copied facades or business names.
+- Minimap uses a muted splat coloring instead of the GIS legend.
+
 ### Known issues and deferred work (first pass)
 
 - OSM building **heights are sparse** (~0.06% with a height tag, ~1.2% with `building:levels` in the user box). Most heights are type/area defaults, so the skyline is plausible, not survey-accurate.
 - Buildings are **generic massing** (procedural facades, simple gables). No photoreal copies, no interiors, no unique landmark architecture.
 - Intersection patches cover **degree ≥ 3** junctions only, not every alley T-junction.
 - Sidewalks follow classified urban streets, not a complete pedestrian network.
+- On the **east bench**, many road/building/tree meshes sit on a flat ~1,769.6 m shelf instead of the 3DEP surface (a height-sample gap from the first build). They can appear to float. Fixing it needs a features rebuild, which was out of scope for this visual pass.
 - Terrain **visual** mesh in the export is 8 m (city) / 16 m (mountains); collision and the web heightfield are finer (~3 m and ~6 m). A 1–2 m city mesh everywhere is deferred.
 - 3D sleepers are thinned in yards; long yard leads may look simpler than the mainline.
 - Unity / Unreal import scripts are documented starters, **not** play-tested in those editors.
